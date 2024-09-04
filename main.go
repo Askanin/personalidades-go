@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/Askanin/personalidade-go.git/database"
 	"github.com/Askanin/personalidade-go.git/models"
 	"github.com/Askanin/personalidade-go.git/routes"
 )
@@ -17,6 +18,7 @@ func main() {
 		{Id: 2, Nome: "nome2", Historia: "historia2"},
 	}
 	
+	database.ConectaBancoDados()
 	fmt.Println("Iniciando o servidro Rest com Go")
 	routes.HandleRequest()
 }
